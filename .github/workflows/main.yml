@@ -17,9 +17,9 @@ jobs:
         dotnet-version: 6.0
     # publishes Blazor project to the release-folder
     - name: Publish .NET Core Project
-      run: dotnet publish BlazorGitHubPagesDemo.csproj -c Release -o release --nologo
+      run: dotnet publish sweetanssalty.web.csproj -c Release -o release --nologo
     - name: Commit wwwroot to GitHub Pages
-      uses: nestorojas/sweetandsalty.Web@1
+      uses: nestorojas/sweetandsalty.Web@3.7.1
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages
